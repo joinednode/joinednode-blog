@@ -2,7 +2,6 @@
 layout: post
 title:  "Welcome to Joined Node!"
 date:   2015-09-22 23:33:42
-categories: inside
 ---
 
 Joined Node is a side project from the guys behind [Flybase](https://flybase.io/), and works well with your Flybase-powered apps.
