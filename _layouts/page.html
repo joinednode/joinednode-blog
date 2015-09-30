@@ -1,14 +1,16 @@
 ---
 layout: default
 ---
-<div class="post">
+<!-- Main Heading -->
+<div class="title-heading">
+	<h2>{{ page.title }}</h2>
+</div>
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-  </header>
-
-  <article class="post-content">
-    {{ content }}
-  </article>
-
+<!-- Main Content -->
+<div id="main">
+	<div class="row">
+		<div id="content" class="12u">
+			{{ content }}
+		</div>
+	</div>
 </div>

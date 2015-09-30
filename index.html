@@ -2,22 +2,47 @@
 layout: default
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<!-- Main Heading -->
+<div class="title-heading">
+	<h2>Latest Posts</h2>
 </div>
+
+<!-- Main Content -->
+<div id="main">
+{% for post in paginator.posts %}
+	<div class="row">
+		<div id="content" class="12u">
+			<header>
+				<h2>
+					<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+				</h2>
+				<hr />
+			</header>
+			<p>
+				<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+			</p>
+			{{ post.content }}
+			{% if forloop.last %}{% else %}
+			<div class="fin">&bull;&bull;&bull;</div>
+			{% endif %}
+		</div>
+	</div>
+{% endfor %}
+	<div class="pagination">
+		{% if paginator.next_page %}
+			<a class="pagination-item older" href="/page{{paginator.next_page}}">Older</a>
+		{% else %}
+			<span class="pagination-item older">Older</span>
+		{% endif %}
+		{% if paginator.previous_page %}
+			{% if paginator.page == 2 %}
+				<a class="pagination-item newer" href="/">Newer</a>
+			{% else %}
+				<a class="pagination-item newer" href="/page{{paginator.previous_page}}">Newer</a>
+			{% endif %}
+		{% else %}
+			<span class="pagination-item newer">Newer</span>
+		{% endif %}
+	</div>
+</div>
+<!-- Main Content -->

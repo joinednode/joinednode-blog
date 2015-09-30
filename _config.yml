@@ -10,3 +10,4 @@ github_username:  joinednode
 
 # Build settings
 markdown: kramdown
+paginate:         5
