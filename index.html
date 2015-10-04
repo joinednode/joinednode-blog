@@ -13,14 +13,12 @@ layout: default
 	<div class="row">
 		<div id="content" class="12u">
 			<header>
+				<div class="post-meta">Oct 2, 2015</div>
 				<h2>
 					<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
 				</h2>
 				<hr />
 			</header>
-			<p>
-				<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-			</p>
 			{{ post.content }}
 			{% if forloop.last %}{% else %}
 			<div class="fin">&bull;&bull;&bull;</div>
