@@ -3630,3 +3630,10 @@ a.pagination-item:hover {
 .post-meta{
 	float:right;
 }
+
+.fin {
+    text-align: center;
+    font-size: 1.5em;
+    color: #999;
+    margin-top: 5px;
+}
