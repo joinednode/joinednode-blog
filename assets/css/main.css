@@ -3397,6 +3397,9 @@ pre code {
     padding: 0;
     white-space: pre;
 }
+p code{
+	color: #fff !important;
+}
 
 /**
  * Blockquotes
