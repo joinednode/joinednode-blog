@@ -53,6 +53,8 @@ The context argument behaves the same way as in the two simpler programming mode
 Our programming model allows for flexibility in building your Joined Node tasks while also sticking to a set model, this helps keep apps streamlined.
 
 ```javascript
-alert('d');
+return function(callback) {
+    calback(null, { i_am: 'done '});
+} 
 ```
 
