@@ -4,6 +4,8 @@ title:  "Welcome to Joined Node!"
 date:   2015-09-22 23:33:42
 ---
 
+## What Exactly Is Joined Node?
+
 **Joined Node** is a simple, lightweight, and secure way of running isolated backend code that removes or reduces the need for a backend.
 
 It is a secure and cost efficient solution to the challange of supporting **extensibility through custom code in multi-tenant systems**.
@@ -12,9 +14,9 @@ It is an ideal companion for **mobile or single page applications that need just
 
 Finally, Joined Node tasks are a flexible and lightweight mechanism that supports a variety of **integration scenarios**.
 
-The Joined Node service was created and is supported by [Flybase](http://flybase.io). In fact, we are using Joined Node internally as a key element of our real-time app backend platform.  Joined Node Node.js tasks work well with your Flybase-powered apps.
+The Joined Node service was created and is supported by [Flybase](http://flybase.io). Joined Node Node.js tasks work well with your Flybase-powered apps. In fact, we are using Joined Node internally as a key element of our real-time app backend platform.
 
-Joined Node lets you run code with an HTTP call, that's it, no provisioning. no deployment.
+With Joined Node, all you need to run code is an HTTP call, that's it, no provisioning. no deployment.
 
 {% highlight javascript %}
 return function (cb) {
@@ -24,7 +26,7 @@ return function (cb) {
 
 
 {% highlight javascript %}
-your-machine:~ curl https://joinednode.com/api/run/joined-container-52/hello
+your-machine:~ curl https://api.joinednode.com/run/joined-container-52/hello
 
 HTTP status: 200
 execution time: 82ms

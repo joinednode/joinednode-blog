@@ -3609,7 +3609,7 @@ a.pagination-item:hover {
 
 @media (min-width: 30em) {
   .pagination {
-    margin: 3rem 0;
+    margin: 2px;
   }
   .pagination-item {
     float: left;
@@ -3636,4 +3636,7 @@ a.pagination-item:hover {
     font-size: 1.5em;
     color: #999;
     margin-top: 5px;
+}
+.pt10px{
+	padding-top:10px !important;
 }
