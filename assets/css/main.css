@@ -20,7 +20,7 @@
 		line-height: 1;
 	}
 
-	ol, ul {
+	 ul {
 		list-style: none;
 	}
 
@@ -1644,6 +1644,10 @@
 	section:last-child,
 	article:last-child {
 		margin-bottom: 0;
+	}
+
+	article ol > li{
+		margin-left: 20px;
 	}
 
 /* Images */
