@@ -5,6 +5,14 @@ This is the Joined Node Blog as seen at https://blog.joinednode.com/
 
 This blog is powered by [Jekyll](https://github.com/mojombo/jekyll)
 
+### Front Matter
+
+- `layout`
+- `title`
+- `date`
+- `published`: true or false
+- `image`
+
 ### More Content Coming
 
 This is a new blog, so as we add features, etc, we'll update this page with information.
