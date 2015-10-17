@@ -21,4 +21,4 @@ This is a new blog, so as we add features, etc, we'll update this page with info
 
 All the infrastracture to run this blog is open sourced under the [MIT license](http://www.opensource.org/licenses/mit-license.php).
 
-The exact content of the articles (the _posts folder) is Qraftlabs Copyright.
+The exact content of the articles (the `_posts` folder) is Joined Node Copyright.
