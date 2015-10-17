@@ -13,9 +13,9 @@ layout: default
 	<div class="row">
 		<div id="content" class="12u">
 {% if post.image %}
-			<span class="image featured">
+			<a href="{{ post.url | prepend: site.baseurl }}" class="image featured">
 				<img src="{{ post.image }}" />
-			</span>
+			</a>
 {% endif %}
 			<header>
 				<div class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</div>
