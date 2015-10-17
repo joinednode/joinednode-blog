@@ -7,11 +7,11 @@ This blog is powered by [Jekyll](https://github.com/mojombo/jekyll)
 
 ### Front Matter
 
-- `layout`
-- `title`
-- `date`
+- `layout`: page or post, so far
+- `title`: page title
+- `date`: date
 - `published`: true or false
-- `image`
+- `image`: url to image
 
 ### More Content Coming
 
