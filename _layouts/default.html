@@ -1,138 +1,155 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		
-		<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-		<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-		
-		<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-		<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+	
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="/assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="/assets/css/main.css?v=1.3f" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" /><![endif]-->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
-		<script>hljs.initHighlightingOnLoad();</script>
-		<link rel="stylesheet" href="/assets/css/zenburn.css" />
-	</head>
-	<body class="no-sidebar">
-		<div id="page-wrapper">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lte IE 8]><script src="/assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="/assets/css/main.css?v=1.3f" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" /><![endif]-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<link rel="stylesheet" href="/assets/css/zenburn.css" />
 
-			<!-- Header Wrapper -->
-				<div id="header-wrapper">
+	<meta property="article:author" content="604781976">
+<!-- Twitter Cards -->	
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="joinednode">
+	<meta name="twitter:creator" content="joinednode">
+	<meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+	<meta name="twitter:description" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+	<meta name="twitter:image" content="{% if page.image %}https://blog.joinednode.com{{ page.image }}{% endif %}" />	
+<!-- Facebook Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+	<meta property="og:site_name" content="{{ site.title }}">
+	<meta property="og:image" content="{% if page.image %}https://blog.joinednode.com{{ page.image }}{% endif %}" />	
+	<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+	<meta property="og:description" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+	<meta property="og:locale" content="en_US">
+</head>
+<body class="no-sidebar">
+	<div id="page-wrapper">
 
-					<!-- Header -->
-						<div id="header" class="container">
+		<!-- Header Wrapper -->
+			<div id="header-wrapper">
 
-							<!-- Logo -->
-								<h1><a href="/" id="logo">The Joined Node Blog</a></h1>
+				<!-- Header -->
+					<div id="header" class="container">
 
-							<!-- Nav -->
-								<nav id="nav">
-									<ul>
-										<li><a href="/">Home</a></li>
+						<!-- Logo -->
+							<h1><a href="/" id="logo">The Joined Node Blog</a></h1>
+
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li><a href="/">Home</a></li>
 {% comment %}
-										<li>
-											<a href="#">Dropdown</a>
-											<ul>
-												<li><a href="#">Lorem ipsum dolor</a></li>
-												<li><a href="#">Magna phasellus</a></li>
-												<li><a href="#">Etiam dolore nisl</a></li>
-												<li>
-													<a href="#">Phasellus consequat</a>
-													<ul>
-														<li><a href="#">Lorem ipsum dolor</a></li>
-														<li><a href="#">Phasellus consequat</a></li>
-														<li><a href="#">Magna phasellus</a></li>
-														<li><a href="#">Etiam dolore nisl</a></li>
-														<li><a href="#">Veroeros feugiat</a></li>
-													</ul>
-												</li>
-												<li><a href="#">Veroeros feugiat</a></li>
-											</ul>
-										</li>
-										<li><a href="/about">About</a></li>
-{% endcomment %}
-										<li><a href="http://joinednode.com" class="btn btn-primary">Learn About Joined Node  »</a></li>
-									</ul>
-								</nav>
-
-						</div>
-
-				</div>
-
-			<!-- Main Wrapper -->
-				<div id="main-wrapper">
-
-					<!-- Main -->
-						<div id="page" class="container">
-							{{ content }}							
-						</div>
-					<!-- Main -->
-
-				</div>
-{% comment %}
-			<!-- Footer Wrapper -->
-				<div id="footer-wrapper">
-					<!-- Footer -->
-						<div id="footer" class="container">
-							<div class="title"><span>This is the footer</span></div>
-							<div class="row">
-
-								<!-- Form -->
-									<section class="6u 12u(narrower)">
-										<header>
-											<h2>What are we all about?</h2>
-										</header>
-										<p>Joined Node is a simple, lightweight, and secure way of running isolated backend code that removed or reduces the need for a backend.</p>
-									</section>
-
-								<!-- Other -->
-									<section class="6u 12u(narrower)">
-										<header>
-											<h2>Get In Touch</h2>
-										</header>
-										<ul class="icons">
-											<li class="icon fa-twitter">
-												<a href="http://twitter.com/joinednode">@joinednode</a>
+									<li>
+										<a href="#">Dropdown</a>
+										<ul>
+											<li><a href="#">Lorem ipsum dolor</a></li>
+											<li><a href="#">Magna phasellus</a></li>
+											<li><a href="#">Etiam dolore nisl</a></li>
+											<li>
+												<a href="#">Phasellus consequat</a>
+												<ul>
+													<li><a href="#">Lorem ipsum dolor</a></li>
+													<li><a href="#">Phasellus consequat</a></li>
+													<li><a href="#">Magna phasellus</a></li>
+													<li><a href="#">Etiam dolore nisl</a></li>
+													<li><a href="#">Veroeros feugiat</a></li>
+												</ul>
 											</li>
-											<li class="icon fa-github">
-												<a href="http://github.com/joinednode">@joinednode</a>
-											</li>
-											<li class="icon fa-rss">
-												<a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>
-											</li>
+											<li><a href="#">Veroeros feugiat</a></li>
 										</ul>
-									</section>
-							</div>
-						</div>
-				</div>
-			<!-- Copyright -->
-				<div id="copyright">
-					&copy; Untitled. All rights reserved.
-				</div>
+									</li>
+									<li><a href="/about">About</a></li>
 {% endcomment %}
-		</div>
+									<li><a href="http://joinednode.com" class="btn btn-primary">Learn About Joined Node  »</a></li>
+								</ul>
+							</nav>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-			<script>
-				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-				})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-				
-				ga('create', 'UA-56159710-7', 'auto');
-				ga('send', 'pageview');
-			</script>
-	</body>
+					</div>
+
+			</div>
+
+		<!-- Main Wrapper -->
+			<div id="main-wrapper">
+
+				<!-- Main -->
+					<div id="page" class="container">
+						{{ content }}							
+					</div>
+				<!-- Main -->
+
+			</div>
+{% comment %}
+		<!-- Footer Wrapper -->
+			<div id="footer-wrapper">
+				<!-- Footer -->
+					<div id="footer" class="container">
+						<div class="title"><span>This is the footer</span></div>
+						<div class="row">
+
+							<!-- Form -->
+								<section class="6u 12u(narrower)">
+									<header>
+										<h2>What are we all about?</h2>
+									</header>
+									<p>Joined Node is a simple, lightweight, and secure way of running isolated backend code that removed or reduces the need for a backend.</p>
+								</section>
+
+							<!-- Other -->
+								<section class="6u 12u(narrower)">
+									<header>
+										<h2>Get In Touch</h2>
+									</header>
+									<ul class="icons">
+										<li class="icon fa-twitter">
+											<a href="http://twitter.com/joinednode">@joinednode</a>
+										</li>
+										<li class="icon fa-github">
+											<a href="http://github.com/joinednode">@joinednode</a>
+										</li>
+										<li class="icon fa-rss">
+											<a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>
+										</li>
+									</ul>
+								</section>
+						</div>
+					</div>
+			</div>
+		<!-- Copyright -->
+			<div id="copyright">
+				&copy; Untitled. All rights reserved.
+			</div>
+{% endcomment %}
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="assets/js/main.js"></script>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+		ga('create', 'UA-56159710-7', 'auto');
+		ga('send', 'pageview');
+	</script>
+</body>
 </html>

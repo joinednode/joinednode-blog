@@ -13,6 +13,11 @@ layout: default
 <div id="main">
 	<div class="row">
 		<div id="content" class="12u">
+{% if page.image %}
+			<span class="image featured">
+				<img src="{{ page.image }}" />
+			</span>
+{% endif %}
 			<article>
 			{{ content }}
 			</article>
