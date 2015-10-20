@@ -26,12 +26,12 @@
 	<meta name="twitter:creator" content="joinednode">
 	<meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}">
 	<meta name="twitter:description" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-	<meta name="twitter:image" content="{% if page.image %}https://blog.joinednode.com{{ page.image }}{% endif %}" />	
+	<meta name="twitter:image" content="{% if page.image %}https://blog.joinednode.com{{ page.image }}{% else %}https://joinednode.com/assets/joinednode.png{% endif %}" />	
 <!-- Facebook Open Graph -->
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}">
 	<meta property="og:site_name" content="{{ site.title }}">
-	<meta property="og:image" content="{% if page.image %}https://blog.joinednode.com{{ page.image }}{% endif %}" />	
+	<meta property="og:image" content="{% if page.image %}https://blog.joinednode.com{{ page.image }}{% else %}https://joinednode.com/assets/joinednode.png{% endif %}" />	
 	<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 	<meta property="og:description" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
 	<meta property="og:locale" content="en_US">

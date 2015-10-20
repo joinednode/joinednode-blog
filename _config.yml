@@ -1,6 +1,6 @@
 # Site settings
 title: The Joined Node Blog
-email: roger@datamcfly.com
+email: roger@joinednode.com
 description: > # this means to ignore newlines until "baseurl:"
   Joined Node is a simple, lightweight, and secure way of running isolated backend code that removes or reduces the need for a backend.
 baseurl: "" # the subpath of your site, e.g. /blog/
