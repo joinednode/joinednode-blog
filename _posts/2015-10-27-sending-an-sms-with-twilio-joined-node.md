@@ -66,11 +66,11 @@ When you hit save, you will get a URL that you can call, the URL is created as `
 
 You would then trigger an SMS message using a POST request:
 
-```html
+```js
 <form method="POST" action="YOUR-JOINEDNODE-URL">
-<input type="text" name="to">
-<input type="text" name="message">
-<button type="submit">Send</button>
+	<input type="text" name="to">
+	<input type="text" name="message">
+	<button type="submit">Send</button>
 </form>
 ```
 
