@@ -3676,3 +3676,14 @@ kbd {
 kbd, samp {
     font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
 }
+
+a.link, a.link:active, a.link:visited, article.link header h2 a, article.link header h2 a:active, article.link header h2 a:visited {
+    color: #b5190e;
+    text-decoration: underline;
+}
+h1.post-title{
+	font-size: 2rem;
+}
+h1.post-title > a.link{
+	color: #fff !important;
+}

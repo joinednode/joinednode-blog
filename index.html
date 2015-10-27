@@ -18,9 +18,16 @@ layout: default
 			</a>
 {% endif %}
 			<header>
-				<div class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</div>
+				<div class="post-meta">
+					{{ post.date | date: "%b %-d, %Y" }}
+					/ <a href="{{ post.url | prepend: site.baseurl }}" class="link"><i class="fa fa-anchor"></i></a></span>
+				</div>
 				<h2>
-					<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+{% if post.link %}
+		<a href="{{ post.link }}" class="link">{{ post.title }} <span class="link-arrow">&rarr;</span></a></h1>
+{% else %}
+		<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+{% endif %}
 				</h2>
 				<hr />
 			</header>

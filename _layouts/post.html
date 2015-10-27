@@ -3,7 +3,11 @@ layout: default
 ---
 <!-- Main Heading -->
 <div class="title-heading">
+{% if page.link %}
+	<h1 class="post-title"><a href="{{ page.link }}" class="link">{{ page.title }} <span class="link-arrow">&rarr;</span></a></h1>
+{% else %}
 	<h2>{{ page.title }}</h2>
+{% endif %}
 	<p>
 		<span class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</span>
 	</p>

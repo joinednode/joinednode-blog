@@ -1,7 +1,7 @@
 The Joined Node Blog
 -------------------
 
-This is the Joined Node Blog as seen at https://blog.joinednode.com/
+This is the Joined Node Blog as seen at [https://blog.joinednode.com/](https://blog.joinednode.com/)
 
 This blog is powered by [Jekyll](https://github.com/mojombo/jekyll)
 
@@ -12,6 +12,7 @@ This blog is powered by [Jekyll](https://github.com/mojombo/jekyll)
 - `date`: date
 - `published`: true or false
 - `image`: url to image
+- `link`: url to link if link post
 
 ### More Content Coming
 
