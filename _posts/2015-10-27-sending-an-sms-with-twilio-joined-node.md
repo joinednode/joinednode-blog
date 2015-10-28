@@ -44,7 +44,7 @@ return function (context, callback) {
 	var twilio_client = new twilio.RestClient(context.env.TWILIO_ACCOUNT_SID, context.env.TWILIO_AUTH_TOKEN);
 	
 	twilio_client.messages.create({
-		to: context.env.TWILIO_NUMBER,
+		to: context.data.to,
 		from: context.env.TWILIO_NUMBER,
 		body: context.data.message
 	}, function(error, message) {
