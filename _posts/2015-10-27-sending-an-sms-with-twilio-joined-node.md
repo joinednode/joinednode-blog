@@ -29,8 +29,7 @@ Now, let's create our Task:
 
 
 ```js
-var request = require('request');
-
+var twilio = require('twilio');
 return function (context, callback) {
 	var required_env_params = ['TWILIO_AUTH_TOKEN', 'TWILIO_ACCOUNT_SID', 'TWILIO_NUMBER'];
 	for (var p in required_env_params)
@@ -42,20 +41,18 @@ return function (context, callback) {
 		if (!context.data[required_params[p]])
 			return callback(new Error('The `' + required_params[p] + '` parameter must be provided.'));
 
-	request({ 
-		url: 'https://api.twilio.com/2010-04-01/Accounts/' + context.env.TWILIO_ACCOUNT_SID + '/Messages', 
-		method: 'POST',
-		auth: {
-			user: context.env.TWILIO_ACCOUNT_SID,
-			pass: context.env.TWILIO_AUTH_TOKEN
-		},
-		form: {
-			From: context.env.TWILIO_NUMBER,
-			To: context.data.to,
-			Body: context.data.message
+	var twilio_client = new twilio.RestClient(context.env.TWILIO_ACCOUNT_SID, context.env.TWILIO_AUTH_TOKEN);
+	
+	twilio_client.messages.create({
+		to: context.env.TWILIO_NUMBER,
+		from: context.env.TWILIO_NUMBER,
+		body: context.data.message
+	}, function(error, message) {
+		if (error) {
+			callback(error.message);
+		} else {
+			callback(null,message);
 		}
-	}, function (error, res, body) {
-		callback(error, body);
 	});
 }
 ```
