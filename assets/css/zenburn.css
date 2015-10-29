@@ -121,6 +121,6 @@ based on dark.css by Ivan Sagalaev
 }
 
 
-.hljs, .hljs-subst, .hljs-tag .hljs-title, .nginx .hljs-title {
+.hljs-tag .hljs-title, .nginx .hljs-title, .xml .hljs-title, .html .hljs-title {
 	color: #efef8f !important;
 }
