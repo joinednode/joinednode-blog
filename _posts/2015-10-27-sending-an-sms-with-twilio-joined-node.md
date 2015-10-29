@@ -91,4 +91,26 @@ req.onload = function() {
 req.send( data );
 ```
 
-You have options that you can use, any method that you can use to POST data, can be used to trigger an SMS message.
+One final method you can use, is our own [JoinedNode.js](http://joinednode.com/docs/js/) library:
+
+```js
+<html>
+<head>
+	<script src="https://cdn.joinednode.com/joinednode.min.js"></script>
+</head>
+<body>
+
+<script>
+	var joinednode = new joinednode('YOUR-JOINEDNODE-CONTAINER-ID');
+	joinednode.post('YOUR-JOINEDNODE-TASK-ID', { to: "PHONE-NUMBER-TO-TEXT", message: "Hello from Joined Node" }).then(function(result) {
+		var result = JSON.parse(result.text);
+		alert( result.message );
+	});
+</script>
+</body>
+</html>
+```
+
+This library lets you call your Joined Node Tasks quickly from inside any HTML page, or node.js app. 
+
+As you can see, you have options that you can use, any method that you can use to POST data, can be used to trigger an SMS message.
