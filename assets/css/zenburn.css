@@ -119,3 +119,8 @@ based on dark.css by Ivan Sagalaev
 .xml .hljs-cdata {
   opacity: 0.5;
 }
+
+
+.hljs, .hljs-subst, .hljs-tag .hljs-title, .nginx .hljs-title {
+	color: #efef8f !important;
+}
