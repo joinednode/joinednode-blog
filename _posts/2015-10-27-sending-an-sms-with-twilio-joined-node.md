@@ -93,7 +93,7 @@ req.send( data );
 
 One final method you can use, is our own [JoinedNode.js](http://joinednode.com/docs/js/) library:
 
-```js
+{% highlight html %}
 <html>
 <head>
 	<script src="https://cdn.joinednode.com/joinednode.min.js"></script>
@@ -109,7 +109,7 @@ One final method you can use, is our own [JoinedNode.js](http://joinednode.com/d
 </script>
 </body>
 </html>
-```
+{% endhighlight %}
 
 This library lets you call your Joined Node Tasks quickly from inside any HTML page, or node.js app. 
 
