@@ -63,7 +63,7 @@ When you hit save, you will get a URL that you can call, the URL is created as `
 
 You would then trigger an SMS message using a POST request:
 
-```html
+```xml
 <form method="POST" action="YOUR-JOINEDNODE-URL">
 	<input type="text" name="to">
 	<input type="text" name="message">
@@ -93,7 +93,7 @@ req.send( data );
 
 One final method you can use, is our own [JoinedNode.js](http://joinednode.com/docs/js/) library:
 
-```html
+```xml
 <html>
 <head>
 	<script src="https://cdn.joinednode.com/joinednode.min.js"></script>
