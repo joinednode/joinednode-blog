@@ -14,5 +14,9 @@ redcarpet:
   extensions: ["smart", "tables", "no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
 paginate:         5
 
+github:
+  repo: /joinednode/joinednode-blog
+  branch: gh-pages
+
 gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
