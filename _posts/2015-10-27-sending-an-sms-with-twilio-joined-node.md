@@ -59,7 +59,7 @@ return function (context, callback) {
 
 This task will use the variables we stored in the environment box, called using `context.env.KEY` and then check our passed data for the message and who to send the text to.
 
-When you hit save, you will get a URL that you can call, the URL is created as `https://api.joinednode.com/YOUR-UNIQUE-CONTAINER/UNIQUE-TASK-URL`, you can then make a cal to your URL from anywhere and it would send an SMS message as long as it passed the `to` and `message` variables.
+When you hit save, you will get a URL that you can call, the URL is created as `https://api.joinednode.com/run/YOUR-UNIQUE-CONTAINER/UNIQUE-TASK-URL`, you can then make a call to your URL from anywhere and it would send an SMS message as long as it passed the `to` and `message` variables.
 
 You would then trigger an SMS message using a POST request:
 
