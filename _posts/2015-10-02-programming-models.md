@@ -2,6 +2,7 @@
 layout: post
 title:  "The Joined Node Programming Model"
 date:   2015-10-02 15:22:22
+image: /images/coding3.jpg
 ---
 
 We want Joined Node Tasks to be hyper-flexible, while also following a set programming model. With that in mind, there are three types of tasks you can run.
