@@ -2,7 +2,7 @@
 layout: post
 title:  "Leaving Beta"
 date:   2015-12-09 08:22:22
-published: false
+published: true
 ---
 
 We're excitedly preparing to leave beta and go into public launch, and it's a time we couldn't be happier about.
