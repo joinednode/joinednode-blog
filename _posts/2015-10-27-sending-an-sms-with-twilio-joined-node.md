@@ -13,20 +13,19 @@ First, create a [Joined Node account](https://app.joinednode.com/signup), if you
 
 Then, log in and create a new Task.
 
-In the Task IDE, you will see an option for title, code and environment, add the following parameters to your environment:
+When you create a new Task, you will see options for `title`, `code` and `encrypted environment variables`. 
 
-```js
-{
-"TWILIO_AUTH_TOKEN":"YOUR-TWILIO-TOKEN",
-"TWILIO_ACCOUNT_SID":"YOUR-TWILIO-ACCOUNT-SID",
-"TWILIO_NUMBER":"A-NUMBER-FROM-YOUR-TWILIO-ACCOUNT"
-}
-```
+First, we need to set up our variables, so add the following parameters to the [Encrypted Environment Variables](https://joinednode.com/docs/env/) section of your IDE:
+
+1. `TWILIO_AUTH_TOKEN` => `YOUR-TWILIO-TOKEN`
+2. `TWILIO_ACCOUNT_SID` => `YOUR-TWILIO-ACCOUNT-SID`
+3. `TWILIO_NUMBER` => `A-NUMBER-FROM-YOUR-TWILIO-ACCOUNT`
+
+These variables will be encrypted when you save, and only viewable either from your Task itself or when you edit it
 
 Replace `YOUR-TWILIO-TOKEN` with your Twilio Account Token, `YOUR-TWILIO-ACCOUNT-SID` with your Twilio Account SID, and `A-NUMBER-FROM-YOUR-TWILIO-ACCOUNT` with a phone number from your Twilio account.
 
 Now, let's create our Task:
-
 
 ```js
 var twilio = require('twilio');
