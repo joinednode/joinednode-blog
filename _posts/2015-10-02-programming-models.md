@@ -4,7 +4,7 @@ title:  "The Joined Node Programming Model"
 date:   2015-10-02 15:22:22
 ---
 
-We want Joined Node Tasks to be hyper-flexible, while also following a set programming model. With that in mind, there are three types of tasks you can run.
+We want Joined Node Recipes to be hyper-flexible, while also following a set programming model. With that in mind, there are three types of recipes you can run.
 
 ### 1. Function with callback
 
@@ -50,4 +50,4 @@ The context argument behaves the same way as in the two simpler programming mode
 
 ### In Conclusion
 
-Our programming model allows for flexibility in building your Joined Node tasks while also sticking to a set model, this helps keep apps streamlined.
+Our programming model allows for flexibility in building your Joined Node recipes while also sticking to a set model, this helps keep apps streamlined.

@@ -16,11 +16,11 @@ The FIT Stack stands for:
 2. Interface (usually angular.js)
 3. Thin servers (reactors, usually built in node.js, when or if needed)
 
-Wanting a resource that lets you easily build the `Thin servers` portion, since you usually don't actually need a server, as most of the work being done is a singular task, you call a backend script that then does some processing like sending emails, SMS messages, storing incoming SMS messages, etc.
+Wanting a resource that lets you easily build the `Thin servers` portion, since you usually don't actually need a server, as most of the work being done is a singular recipe, you call a backend script that then does some processing like sending emails, SMS messages, storing incoming SMS messages, etc.
 
 Flybase lets you use incoming webhooks, and we're about to release outgoing webhooks, but we wanted to take webhooks further, not just for Flybase but for anything.
 
-Now, you can host your website in Github Pages, on S3, or anywhere, and use a javascript or HTTP call to trigger a Task on Joined Node, this lets you need less resources to do more, just think of that?
+Now, you can host your website in Github Pages, on S3, or anywhere, and use a javascript or HTTP call to trigger a Recipe on Joined Node, this lets you need less resources to do more, just think of that?
 
 Killing the backend means you can do more, with less requirements...
 

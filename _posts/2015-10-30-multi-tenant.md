@@ -9,7 +9,7 @@ _Run untrusted customer code in a multi-tenant trading platform_
 
 Let's consider a trading platform that allows customers to define algorithmic trading strategies by writing custom code. This is an example of a class of multi-tenant systems that allow extensibility through custom code, and require a secure way of running that code in an isolated way. Flybase itself is another good example of such system: we run custom authorization rules and DB scripts on behalf of our subscribers.
 
-Joined Node Tasks are a great way to run such untrusted code because they provide strong isolation guarantees.
+Joined Node Recipes are a great way to run such untrusted code because they provide strong isolation guarantees.
 
 To provide a simple example, let's assume each of the customers of the trading platform defined a JavaScript function that returns a trade order disposition when called with the latest stock price information:
 
@@ -24,9 +24,9 @@ To provide a simple example, let's assume each of the customers of the trading p
 };     
 {% endhighlight %}
 
-Your application has no control over the code your customers write. Some problems that you must account for when running untrusted code on behalf of your customers is data isolation between customers and fair consumption of computing resources. These are the exact problems that Joined Node Tasks address. By executing your customer code using Joined Node you benefit from the isolation guarantees they provide.
+Your application has no control over the code your customers write. Some problems that you must account for when running untrusted code on behalf of your customers is data isolation between customers and fair consumption of computing resources. These are the exact problems that Joined Node Recipes address. By executing your customer code using Joined Node you benefit from the isolation guarantees they provide.
 
-This is how you could execute your customer code using Tasks:
+This is how you could execute your customer code using Recipes:
 
 {% highlight javascript %}
 	var request = require('request');
@@ -57,6 +57,6 @@ Take note of the following in the sample above:
 
 4. The code of the JavaScript function to run itself is passed in the payload of the HTTPS POST request.
 
-5. The call to Joined Node is authenticated using your own webtask token.
+5. The call to Joined Node is authenticated using your own webrecipe token.
 
-6. Using Joined Node to execute untrusted code in a secure and isolated way was the primary motivation for this technology, and this is how we are using it internally at Flybase. Joined Node Tasks solve the difficult problem of running untrusted code in a multi-tenant system and let you spend more time on the logic of your application.
+6. Using Joined Node to execute untrusted code in a secure and isolated way was the primary motivation for this technology, and this is how we are using it internally at Flybase. Joined Node Recipes solve the difficult problem of running untrusted code in a multi-tenant system and let you spend more time on the logic of your application.

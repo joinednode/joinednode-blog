@@ -5,15 +5,15 @@ date:   2015-10-27 15:22:22
 published: true
 ---
 
-One handy Task that we use often on projects is sending SMS messages using Twilio.
+One handy Recipe that we use often on projects is sending SMS messages using Twilio.
 
-To make this quick, we set up a task that we can send the message to.
+To make this quick, we set up a recipe that we can send the message to.
 
 First, create a [Joined Node account](https://app.joinednode.com/signup), if you haven't already done so.
 
-Then, log in and create a new Task.
+Then, log in and create a new Recipe.
 
-When you create a new Task, you will see options for `title`, `code` and `encrypted environment variables`. 
+When you create a new Recipe, you will see options for `title`, `code` and `encrypted environment variables`. 
 
 First, we need to set up our variables, so add the following parameters to the [Encrypted Environment Variables](https://joinednode.com/docs/env/) section of your IDE:
 
@@ -21,11 +21,11 @@ First, we need to set up our variables, so add the following parameters to the [
 2. `TWILIO_ACCOUNT_SID` => `YOUR-TWILIO-ACCOUNT-SID`
 3. `TWILIO_NUMBER` => `A-NUMBER-FROM-YOUR-TWILIO-ACCOUNT`
 
-These variables will be encrypted when you save, and only viewable either from your Task itself or when you edit it
+These variables will be encrypted when you save, and only viewable either from your Recipe itself or when you edit it
 
 Replace `YOUR-TWILIO-TOKEN` with your Twilio Account Token, `YOUR-TWILIO-ACCOUNT-SID` with your Twilio Account SID, and `A-NUMBER-FROM-YOUR-TWILIO-ACCOUNT` with a phone number from your Twilio account.
 
-Now, let's create our Task:
+Now, let's create our Recipe:
 
 ```js
 var twilio = require('twilio');
@@ -56,7 +56,7 @@ return function (context, callback) {
 }
 ```
 
-This task will use the variables we stored in the environment box, called using `context.env.KEY` and then check our passed data for the message and who to send the text to.
+This recipe will use the variables we stored in the environment box, called using `context.env.KEY` and then check our passed data for the message and who to send the text to.
 
 When you hit save, you will get a URL that you can call, the URL is created as `https://api.joinednode.com/run/YOUR-UNIQUE-CONTAINER/UNIQUE-TASK-URL`, you can then make a call to your URL from anywhere and it would send an SMS message as long as it passed the `to` and `message` variables.
 
@@ -110,6 +110,6 @@ One final method you can use, is our own [JoinedNode.js](http://joinednode.com/d
 </html>
 ```
 
-This library lets you call your Joined Node Tasks quickly from inside any HTML page, or node.js app. 
+This library lets you call your Joined Node Recipes quickly from inside any HTML page, or node.js app. 
 
 As you can see, you have options that you can use, any method that you can use to POST data, can be used to trigger an SMS message.
