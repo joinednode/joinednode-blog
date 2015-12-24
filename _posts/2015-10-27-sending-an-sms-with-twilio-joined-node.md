@@ -58,7 +58,7 @@ return function (context, callback) {
 
 This recipe will use the variables we stored in the environment box, called using `context.env.KEY` and then check our passed data for the message and who to send the text to.
 
-When you hit save, you will get a URL that you can call, the URL is created as `https://api.joinednode.com/run/YOUR-UNIQUE-CONTAINER/UNIQUE-TASK-URL`, you can then make a call to your URL from anywhere and it would send an SMS message as long as it passed the `to` and `message` variables.
+When you hit save, you will get a URL that you can call, the URL is created as `https://api.joinednode.com/run/YOUR-UNIQUE-CONTAINER/UNIQUE-RECIPE-URL`, you can then make a call to your URL from anywhere and it would send an SMS message as long as it passed the `to` and `message` variables.
 
 You would then trigger an SMS message using a POST request:
 
@@ -89,27 +89,3 @@ req.onload = function() {
 };
 req.send( data );
 ```
-
-One final method you can use, is our own [JoinedNode.js](http://joinednode.com/docs/js/) library:
-
-```xml
-<html>
-<head>
-	<script src="https://cdn.joinednode.com/joinednode.min.js"></script>
-</head>
-<body>
-
-<script>
-	var joinednode = new joinednode('YOUR-JOINEDNODE-CONTAINER-ID');
-	joinednode.post('YOUR-JOINEDNODE-TASK-ID', { to: "PHONE-NUMBER-TO-TEXT", message: "Hello from Joined Node" }).then(function(result) {
-		var result = JSON.parse(result.text);
-		alert( result.message );
-	});
-</script>
-</body>
-</html>
-```
-
-This library lets you call your Joined Node Recipes quickly from inside any HTML page, or node.js app. 
-
-As you can see, you have options that you can use, any method that you can use to POST data, can be used to trigger an SMS message.
